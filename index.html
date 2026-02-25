@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy Portfolio</title>
+
+<style>
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated Galaxy Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #0b0c2a 0%, #000000 100%);
+    position: relative;
+}
+
+/* Moving Stars Layer */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px, 100px 100px;
+    background-position: 0 0, 25px 25px;
+    animation: moveStars 60s linear infinite;
+    opacity: 0.4;
+}
+
+/* Nebula Glow */
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(123,47,247,0.3), transparent 40%),
+                radial-gradient(circle at 70% 60%, rgba(241,7,163,0.3), transparent 40%);
+    animation: pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-500px); }
+}
+
+@keyframes pulse {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Glass Card */
+.profile-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    width: 360px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(123,47,247,0.5);
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #7b2ff7;
+    box-shadow: 0 0 25px #f107a3;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Text */
+h1 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.connect-text {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Buttons */
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    padding: 10px 18px;
+    margin: 8px 5px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #f107a3;
+}
+
+</style>
+</head>
+<body>
+
+<div class="profile-container">
+
+    <img src="Untitled.jpg" alt="Profile Picture" class="profile-pic">
+
+    <h1>Hi, I'm Shobin</h1>
+    <h3>DevOps Engineer</h3>
+
+    <p>
+        Welcome to my galaxy-themed portfolio!  
+        Exploring the universe of DevOps and Cloud.
+    </p>
+
+    <p class="connect-text">Connect with me.</p>
+
+    <div class="links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Projects</a>
+    </div>
+
+</div>
+
+</body>
+</html>
