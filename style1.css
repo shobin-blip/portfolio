@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+
+}
+
+.project_container
+{
+    background-color: rgba(255, 255,255, 0.03);
+    padding:30px ;
+    border-radius: 20px;
+    text-align: center;
+}
+
+p
+{
+color: #a5a6d1;
+}
+
+.date_input
+{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255,255, 0.03);
+     color: white;
+     width: 60%;
+     border-width: 1;
+     border-color: #6366f1;
+}
+
+.fetch_result
+{
+    background: #6366f1;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    border-width: 0px;
+}
